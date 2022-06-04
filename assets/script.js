@@ -20,12 +20,12 @@ $(document).ready(function () {
         $(this).addClass("past");
       } else if (blockOfTime === timeNow) {
         $(this).removeClass("future");
-        $(this).removeClass("present");
-        $(this).addClass("past");
+        $(this).removeClass("past");
+        $(this).addClass("present");
       } else {
-        $(this).removeClass("future");
+        $(this).removeClass("past");
         $(this).removeClass("present");
-        $(this).addClass("past");
+        $(this).addClass("future");
       }
     });
   }
@@ -41,6 +41,8 @@ $(document).ready(function () {
   $("#hour16 .description").val(localStorage.getItem("hour16"));
   $("#hour17 .description").val(localStorage.getItem("hour17"));
   $("#hour18 .description").val(localStorage.getItem("hour18"));
+  $("#hour19 .description").val(localStorage.getItem("hour19"));
+ 
 
   timeTracker();
 });
